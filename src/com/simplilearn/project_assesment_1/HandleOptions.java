@@ -12,7 +12,7 @@ public class HandleOptions {
 
 				switch (input) {
 				case 1:
-					FileWindow.displayAllFiles("main");
+					FileWindow.displayAllFiles("folder");
 					break;
 				case 2:
 					HandleOptions.handleFileMenuOptions();

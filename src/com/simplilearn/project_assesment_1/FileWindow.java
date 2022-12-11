@@ -7,7 +7,7 @@ public class FileWindow {
 
 	public static void createMainFolderIfNotPresent() {
 
-		File file = new File("main");
+		File file = new File("folder");
 		if (!file.exists()) {
 			file.mkdirs();
 		}
@@ -28,7 +28,7 @@ public class FileWindow {
 	}
 
 	public static void deleteFile(String fileToDelete) {
-		File file = new File("./main/" + fileToDelete);
+		File file = new File("./folder/" + fileToDelete);
 
 		if (file.delete()) {
 			System.out.println(fileToDelete + " file is deleted. ");
@@ -40,7 +40,7 @@ public class FileWindow {
 	}
 
 	public static void createFile(String fileToAdd) {
-		File file = new File("./main/" + fileToAdd);
+		File file = new File("./folder/" + fileToAdd);
 
 		try {
 			if (file.createNewFile()) {
@@ -53,7 +53,7 @@ public class FileWindow {
 
 	public static void searchFile(String fileToSearch) {
 		FileWindow.createMainFolderIfNotPresent();
-		File dir = new File("main");
+		File dir = new File("folder");
 		File[] files = dir.listFiles();
 
 		for (File f : files) {
